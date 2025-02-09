@@ -84,18 +84,21 @@ void PacketCapture::capture_loop() {
         continue;
       }
 
-      if (bytes_received > 0) {
-        fmt::print("Received {} bytes from {}\n", bytes_received,
-                   sender_endpoint.address().to_string());
+      // Only log receive issues or incomplete messages
+      if (bytes_received < msg_size || bytes_received % msg_size != 0) {
+        fmt::print(stderr, "Received incomplete message(s): {} bytes from {}\n",
+                   bytes_received, sender_endpoint.address().to_string());
+        messages_invalid_++;
+        continue;
       }
 
-      // Process each complete message
-      size_t processed = 0;
-      while (processed + msg_size <= bytes_received) {
-        const auto *msg = reinterpret_cast<const MarketMessage *>(
-            recv_buffer_.data() + processed);
+      size_t messages_in_packet = bytes_received / msg_size;
 
-        // Basic validation
+      // Process each message
+      for (size_t i = 0; i < messages_in_packet; i++) {
+        const auto *msg = reinterpret_cast<const MarketMessage *>(
+            recv_buffer_.data() + (i * msg_size));
+
         if (validate_message(*msg)) {
           if (!buffer_.try_push(*msg)) {
             const auto dropped = ++messages_dropped_;
@@ -105,22 +108,13 @@ void PacketCapture::capture_loop() {
             }
           } else {
             const auto received = ++messages_received_;
-            if (received % 1000 == 0) {
+            if (messages_received_ % 10000 == 0) {
               fmt::print("Successfully received {} messages\n", received);
             }
           }
         } else {
-          const auto invalid = ++messages_invalid_;
-          if (invalid % 1000 == 0) {
-            fmt::print(
-                stderr,
-                "Invalid message: seq={}, sym={}, type={}, price={:.2f}\n",
-                msg->sequence_number, msg->symbol_id,
-                static_cast<int>(msg->type), msg->trade.price);
-          }
+          ++messages_invalid_;
         }
-
-        processed += msg_size;
       }
 
     } catch (const std::exception &e) {

@@ -148,12 +148,24 @@ public:
   }
 
 private:
+  bool is_valid_tick_file(const std::filesystem::path &path) {
+    try {
+      // Extract symbol id from filename
+      auto stem = path.stem().string();
+      auto symbol_id = std::stoul(stem);
+      return symbol_id > 0 && symbol_id <= 10000;
+    } catch (...) {
+      return false;
+    }
+  }
+
   void verify_capture(const MarketDataSimulator::MessageLog &sent_messages,
                       const std::string &capture_dir,
                       const MarketDataSimulator::Config
                           &sim_config) { // Added sim_config parameter
 
     fmt::print("\nStarting message verification...\n");
+    fmt::print("Verifying files in: {}\n", capture_dir);
 
     struct Stats {
       uint64_t total_read = 0;
@@ -165,36 +177,55 @@ private:
       uint64_t max_seq = 0;
     } stats;
 
-    // First pass - validate basic message structure
+    // List all files first
+    std::vector<std::filesystem::path> tick_files;
     for (const auto &entry : std::filesystem::directory_iterator(capture_dir)) {
-      if (entry.path().extension() == ".tick") {
-        std::ifstream file(entry.path(), std::ios::binary);
-        MarketMessage msg;
+      if (entry.path().extension() == ".tick" &&
+          is_valid_tick_file(entry.path())) {
+        tick_files.push_back(entry.path());
+        fmt::print("Found valid tick file: {}\n", entry.path().string());
+      }
+    }
 
-        while (file.read(reinterpret_cast<char *>(&msg), sizeof(msg))) {
-          stats.total_read++;
+    // First pass - validate basic message structure
+    for (const auto &file_path : tick_files) {
+      std::ifstream file(file_path, std::ios::binary);
+      MarketMessage msg;
+      size_t file_messages = 0;
 
-          // Validate message fields
-          if (msg.sequence_number > 0 && msg.symbol_id > 0 &&
-              msg.symbol_id <=
-                  sim_config.num_symbols && // Using sim_config here
-              msg.type == MessageType::Trade &&
-              msg.trade.price > 0) {
+      fmt::print("Processing file: {}\n", file_path.string());
 
-            stats.valid_messages++;
-            stats.min_seq = std::min(stats.min_seq, msg.sequence_number);
-            stats.max_seq = std::max(stats.max_seq, msg.sequence_number);
-          } else {
-            stats.invalid_messages++;
-            if (stats.invalid_messages < 10) {
-              fmt::print(
-                  "Invalid message: seq={}, sym={}, type={}, price={:.2f}\n",
-                  msg.sequence_number, msg.symbol_id,
-                  static_cast<int>(msg.type), msg.trade.price);
-            }
+      while (file.read(reinterpret_cast<char *>(&msg), sizeof(msg))) {
+        stats.total_read++;
+        file_messages++;
+
+        // Debug first few messages from each file
+        if (file_messages <= 5) {
+          fmt::print("Read message {}: seq={}, sym={}, price={:.2f}, size={}\n",
+                     file_messages, msg.sequence_number, msg.symbol_id,
+                     msg.trade.price, msg.trade.size);
+        }
+
+        if (msg.sequence_number > 0 && msg.symbol_id > 0 &&
+            msg.symbol_id <= 10000 && msg.type == MessageType::Trade &&
+            msg.trade.price > 0) {
+
+          stats.valid_messages++;
+          stats.min_seq = std::min(stats.min_seq, msg.sequence_number);
+          stats.max_seq = std::max(stats.max_seq, msg.sequence_number);
+        } else {
+          stats.invalid_messages++;
+          if (stats.invalid_messages < 10) {
+            fmt::print("Invalid message in {}: seq={}, sym={}, type={}, "
+                       "price={:.2f}\n",
+                       file_path.filename().string(), msg.sequence_number,
+                       msg.symbol_id, static_cast<int>(msg.type),
+                       msg.trade.price);
           }
         }
       }
+      fmt::print("Finished file {}. Read {} messages\n", file_path.string(),
+                 file_messages);
     }
 
     fmt::print("\nBasic Statistics:\n");

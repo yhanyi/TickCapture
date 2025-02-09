@@ -2,7 +2,6 @@
 #include "../../include/tick_capture/types.hpp"
 #include <atomic>
 #include <chrono>
-#include <memory>
 #include <mutex>
 #include <thread>
 #include <unordered_map>

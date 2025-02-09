@@ -34,6 +34,3 @@ add_subdirectory(src)
 if(TICK_CAPTURE_BUILD_BENCHMARKS)
     add_subdirectory(benchmarks)
 endif()
-
-# TODO: Enable tools later
-# add_subdirectory(tools)

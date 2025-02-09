@@ -8,29 +8,21 @@ TickStorage::TickStorage(const std::string &base_path) : base_path_(base_path) {
 }
 
 void TickStorage::store(const MarketMessage &msg) {
-  auto start_time = std::chrono::high_resolution_clock::now();
+  try {
+    auto &handle = get_file_handle(msg.symbol_id);
+    handle.file->write(reinterpret_cast<const char *>(&msg),
+                       sizeof(MarketMessage));
+    handle.file->flush();
 
-  // Get file handle for this symbol
-  auto &handle = get_file_handle(msg.symbol_id);
+    const auto total = ++total_messages_;
 
-  // Write the complete message as a single unit
-  // Since we've properly aligned and padded the struct, this is now safe
-  handle.file->write(reinterpret_cast<const char *>(&msg),
-                     sizeof(MarketMessage));
-  handle.file->flush(); // Ensure data is written to disk
+    if (total % 10000 == 0) {
+      fmt::print("Successfully stored {} messages\n", total);
+    }
 
-  // Update statistics
-  handle.messages_written++;
-  handle.bytes_written += sizeof(MarketMessage);
-
-  total_messages_++;
-  total_bytes_ += sizeof(MarketMessage);
-
-  // Update timing stats
-  auto end_time = std::chrono::high_resolution_clock::now();
-  total_write_time_ += std::chrono::duration_cast<std::chrono::nanoseconds>(
-                           end_time - start_time)
-                           .count();
+  } catch (const std::exception &e) {
+    fmt::print(stderr, "Error storing message: {}\n", e.what());
+  }
 }
 
 void TickStorage::flush() {
@@ -49,12 +41,22 @@ TickStorage::Stats TickStorage::get_stats() const {
 }
 
 TickStorage::FileHandle &TickStorage::get_file_handle(uint32_t symbol_id) {
+  // Validate symbol_id first
+  if (symbol_id == 0 || symbol_id > 10000) {
+    throw std::runtime_error(fmt::format("Invalid symbol_id: {}", symbol_id));
+  }
+
   FileMap::accessor acc;
   if (!files_.find(acc, symbol_id)) {
     // Create new file handle
     auto filepath = base_path_ / fmt::format("{}.tick", symbol_id);
-    auto file = std::make_unique<std::ofstream>(filepath, std::ios::binary |
-                                                              std::ios::app);
+    fmt::print("Creating new file for symbol {}: {}\n", symbol_id,
+               filepath.string());
+
+    auto file = std::make_unique<std::ofstream>(
+        filepath,
+        std::ios::binary | std::ios::trunc // Start fresh
+    );
 
     if (!file->is_open()) {
       throw std::runtime_error(
@@ -65,7 +67,6 @@ TickStorage::FileHandle &TickStorage::get_file_handle(uint32_t symbol_id) {
     handle.file = std::move(file);
     files_.insert(acc, {symbol_id, std::move(handle)});
   }
-
   return acc->second;
 }
 

@@ -70,45 +70,22 @@ void MarketDataSimulator::run_simulation() {
   const auto base_interval = nanoseconds(1'000'000'000 / config_.base_msg_rate);
   auto next_send = steady_clock::now();
 
-  uint64_t messages_this_second = 0;
-  auto rate_reset = steady_clock::now() + seconds(1);
-  size_t debug_count = 0; // For initial message debugging
-
   while (running_) {
     auto now = steady_clock::now();
 
-    // Reset rate counter every second
-    if (now >= rate_reset) {
-      fmt::print("Simulator current rate: {} msgs/sec\n", messages_this_second);
-      messages_this_second = 0;
-      rate_reset += seconds(1);
-    }
-
-    // Send message if it's time
     if (now >= next_send) {
       auto msg = generate_message();
-
-      // Debug first few messages
-      if (debug_count < 5) {
-        fmt::print(
-            "Generated message {}: seq={}, sym={}, price={:.2f}, size={}\n",
-            debug_count++, msg.sequence_number, msg.symbol_id, msg.trade.price,
-            msg.trade.size);
-      }
-
       if (send_message(msg)) {
-        messages_this_second++;
-        next_send += base_interval;
+        const auto sent = ++messages_sent_;
+        if (sent % 10000 == 0) {
+          fmt::print("Successfully sent {} messages\n", sent);
+        }
       } else {
-        const auto dropped = ++messages_dropped_;
-        // Brief backoff on error
+        ++messages_dropped_;
         next_send += microseconds(100);
-        fmt::print(stderr, "Failed to send message {}. Total dropped: {}\n",
-                   msg.sequence_number, dropped);
       }
     }
 
-    // Sleep if we're ahead of schedule
     if (auto sleep_time = next_send - steady_clock::now();
         sleep_time > nanoseconds(0)) {
       std::this_thread::sleep_for(sleep_time);
@@ -182,7 +159,7 @@ bool MarketDataSimulator::send_message(const MarketMessage &msg) {
     }
 
     const auto sent = ++messages_sent_;
-    if (sent % 1000 == 0) {
+    if (sent % 10000 == 0) {
       fmt::print("Successfully sent {} messages\n", sent);
     }
     return true;
