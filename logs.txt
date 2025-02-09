@@ -1,0 +1,61 @@
+
+Starting benchmark at 1000 msgs/sec for 10 seconds
+Socket receive buffer size: 8388608 bytes
+Starting capture loop. Message size: 64 bytes
+Messages - Received: 0 Processed: 0 Dropped: 0 Rate: 0.00k/s
+Starting simulator with rate: 1000 msgs/sec
+Generated message 0: seq=1, sym=8, price=345.81, size=1052
+Received 64 bytes from 192.168.1.31
+Generated message 1: seq=2, sym=9, price=418.44, size=9735
+Received 64 bytes from 192.168.1.31
+Generated message 2: seq=3, sym=10, price=235.91, size=1159
+Received 64 bytes from 192.168.1.31
+Generated message 3: seq=4, sym=1, price=489.09, size=3025
+Received 64 bytes from 192.168.1.31
+Generated message 4: seq=5, sym=9, price=418.29, size=643
+Received 64 bytes from 192.168.1.31
+Successfully sent 10000 messages
+Received 64 bytes from 192.168.1.31
+Successfully received 10000 messages
+Simulator stopping. Total messages sent: 10000
+
+Starting message verification...
+Invalid message: seq=2, sym=104115265, type=74, price=0.00
+Invalid message: seq=1739084982448624000, sym=1504, type=1, price=0.00
+Invalid message: seq=4294967297, sym=0, type=0, price=0.00
+Invalid message: seq=4650285545021863226, sym=0, type=0, price=0.00
+Invalid message: seq=4294975963, sym=57, type=0, price=0.00
+Invalid message: seq=0, sym=3626577600, type=147, price=0.00
+Invalid message: seq=0, sym=1, type=1, price=803.24
+Invalid message: seq=85, sym=573113923, type=122, price=0.00
+Invalid message: seq=1739084982543615000, sym=4688, type=1, price=0.00
+
+Basic Statistics:
+  Total messages read: 94643
+  Valid messages: 8102
+  Invalid messages: 86541
+  Sequence range: 3 to 6159396672
+Missing sent message: seq=6138982208
+Missing sent message: seq=6138982208
+Missing sent message: seq=6138982208
+Missing sent message: seq=6138982208
+Missing sent message: seq=6138982208
+Missing sent message: seq=6138982208
+Missing sent message: seq=6138982208
+Missing sent message: seq=6138982208
+Missing sent message: seq=6138982208
+
+Verification Results:
+  Verified messages: 8102
+  Mismatches: 0
+  Missing sent messages: 5098
+  Error rate: 0.00%
+
+Benchmark Results:
+================
+Target Rate: 1000 msgs/sec
+Messages Sent: 10000
+Messages Captured: 10000
+Messages Dropped: 0
+Capture Rate: 100.00%
+Run Time: 10.90 seconds
