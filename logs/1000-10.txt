@@ -1,0 +1,172 @@
+
+Starting benchmark at 1000 msgs/sec for 10 seconds
+Socket receive buffer size: 8388608 bytes
+Starting capture loop. Message size: 64 bytes
+Messages - Received: 0 Processed: 0 Dropped: 0 Rate: 0.00k/s
+Starting simulator with rate: 1000 msgs/sec
+Generated message 0: seq=1, sym=9, price=262.51, size=6857
+Storing message 0: seq=1, sym=9, price=262.51, size=6857
+Creating new file for symbol 9: /tmp/tick_bench/bench_1000/9.tick
+Generated message 1: seq=2, sym=10, price=368.35, size=2043
+Storing message 1: seq=2, sym=10, price=368.35, size=2043
+Creating new file for symbol 10: /tmp/tick_bench/bench_1000/10.tick
+Generated message 2: seq=3, sym=1, price=242.98, size=1030
+Storing message 2: seq=3, sym=1, price=242.98, size=1030
+Creating new file for symbol 1: /tmp/tick_bench/bench_1000/1.tick
+Generated message 3: seq=4, sym=1, price=242.80, size=2596
+Storing message 3: seq=4, sym=1, price=242.80, size=2596
+Generated message 4: seq=5, sym=2, price=215.45, size=2495
+Storing message 4: seq=5, sym=2, price=215.45, size=2495
+Creating new file for symbol 2: /tmp/tick_bench/bench_1000/2.tick
+Creating new file for symbol 7: /tmp/tick_bench/bench_1000/7.tick
+Creating new file for symbol 3: /tmp/tick_bench/bench_1000/3.tick
+Creating new file for symbol 6: /tmp/tick_bench/bench_1000/6.tick
+Creating new file for symbol 5: /tmp/tick_bench/bench_1000/5.tick
+Creating new file for symbol 8: /tmp/tick_bench/bench_1000/8.tick
+Creating new file for symbol 4: /tmp/tick_bench/bench_1000/4.tick
+Messages - Received: 895 Processed: 895 Dropped: 0 Rate: 0.90k/s
+Successfully sent 1000 messages
+Successfully stored 1000 messages
+Simulator current rate: 1000 msgs/sec
+Messages - Received: 1897 Processed: 1897 Dropped: 0 Rate: 1.90k/s
+Successfully sent 2000 messages
+Successfully stored 2000 messages
+Simulator current rate: 1000 msgs/sec
+Messages - Received: 2895 Processed: 2895 Dropped: 0 Rate: 2.90k/s
+Successfully sent 3000 messages
+Successfully stored 3000 messages
+Simulator current rate: 1000 msgs/sec
+Messages - Received: 3900 Processed: 3900 Dropped: 0 Rate: 3.90k/s
+Successfully sent 4000 messages
+Successfully stored 4000 messages
+Simulator current rate: 1000 msgs/sec
+Messages - Received: 4895 Processed: 4895 Dropped: 0 Rate: 4.89k/s
+Successfully sent 5000 messages
+Successfully stored 5000 messages
+Simulator current rate: 1000 msgs/sec
+Messages - Received: 5895 Processed: 5895 Dropped: 0 Rate: 5.89k/s
+Successfully sent 6000 messages
+Successfully stored 6000 messages
+Simulator current rate: 1000 msgs/sec
+Messages - Received: 6895 Processed: 6895 Dropped: 0 Rate: 6.89k/s
+Successfully sent 7000 messages
+Successfully stored 7000 messages
+Simulator current rate: 1000 msgs/sec
+Messages - Received: 7897 Processed: 7897 Dropped: 0 Rate: 7.90k/s
+Successfully sent 8000 messages
+Successfully stored 8000 messages
+Simulator current rate: 1000 msgs/sec
+Messages - Received: 8895 Processed: 8895 Dropped: 0 Rate: 8.89k/s
+Successfully sent 9000 messages
+Successfully stored 9000 messages
+Simulator current rate: 1000 msgs/sec
+Messages - Received: 9898 Processed: 9898 Dropped: 0 Rate: 9.90k/s
+Successfully sent 10000 messages
+Successfully received 10000 messages
+Successfully stored 10000 messages
+Simulator current rate: 1000 msgs/sec
+Simulator stopping. Total messages sent: 10005
+
+Starting message verification...
+Verifying files in: /tmp/tick_bench/bench_1000
+Found valid tick file: /tmp/tick_bench/bench_1000/1.tick
+Found valid tick file: /tmp/tick_bench/bench_1000/10.tick
+Found valid tick file: /tmp/tick_bench/bench_1000/7.tick
+Found valid tick file: /tmp/tick_bench/bench_1000/6.tick
+Found valid tick file: /tmp/tick_bench/bench_1000/5.tick
+Found valid tick file: /tmp/tick_bench/bench_1000/9.tick
+Found valid tick file: /tmp/tick_bench/bench_1000/8.tick
+Found valid tick file: /tmp/tick_bench/bench_1000/4.tick
+Found valid tick file: /tmp/tick_bench/bench_1000/3.tick
+Found valid tick file: /tmp/tick_bench/bench_1000/2.tick
+Processing file: /tmp/tick_bench/bench_1000/1.tick
+Read message 1: seq=3, sym=1, price=242.98, size=1030
+Read message 2: seq=4, sym=1, price=242.80, size=2596
+Read message 3: seq=14, sym=1, price=242.71, size=8694
+Read message 4: seq=17, sym=1, price=242.60, size=7120
+Read message 5: seq=20, sym=1, price=242.62, size=324
+Finished file /tmp/tick_bench/bench_1000/1.tick. Read 983 messages
+Processing file: /tmp/tick_bench/bench_1000/10.tick
+Read message 1: seq=2, sym=10, price=368.35, size=2043
+Read message 2: seq=8, sym=10, price=368.29, size=5915
+Read message 3: seq=44, sym=10, price=368.17, size=632
+Read message 4: seq=64, sym=10, price=368.33, size=3008
+Read message 5: seq=79, sym=10, price=368.45, size=4096
+Finished file /tmp/tick_bench/bench_1000/10.tick. Read 1002 messages
+Processing file: /tmp/tick_bench/bench_1000/7.tick
+Read message 1: seq=6, sym=7, price=352.38, size=7390
+Read message 2: seq=16, sym=7, price=352.43, size=1179
+Read message 3: seq=18, sym=7, price=352.41, size=6127
+Read message 4: seq=41, sym=7, price=352.44, size=3701
+Read message 5: seq=68, sym=7, price=352.07, size=1337
+Finished file /tmp/tick_bench/bench_1000/7.tick. Read 1050 messages
+Processing file: /tmp/tick_bench/bench_1000/6.tick
+Read message 1: seq=10, sym=6, price=320.85, size=3333
+Read message 2: seq=19, sym=6, price=320.92, size=8003
+Read message 3: seq=23, sym=6, price=321.01, size=6686
+Read message 4: seq=32, sym=6, price=321.10, size=4796
+Read message 5: seq=54, sym=6, price=321.28, size=9214
+Finished file /tmp/tick_bench/bench_1000/6.tick. Read 993 messages
+Processing file: /tmp/tick_bench/bench_1000/5.tick
+Read message 1: seq=13, sym=5, price=152.28, size=6332
+Read message 2: seq=26, sym=5, price=152.27, size=9122
+Read message 3: seq=31, sym=5, price=152.44, size=2109
+Read message 4: seq=42, sym=5, price=152.38, size=3637
+Read message 5: seq=45, sym=5, price=152.49, size=4098
+Finished file /tmp/tick_bench/bench_1000/5.tick. Read 997 messages
+Processing file: /tmp/tick_bench/bench_1000/9.tick
+Read message 1: seq=1, sym=9, price=262.51, size=6857
+Read message 2: seq=12, sym=9, price=262.67, size=3079
+Read message 3: seq=43, sym=9, price=262.65, size=1869
+Read message 4: seq=48, sym=9, price=262.56, size=4417
+Read message 5: seq=61, sym=9, price=262.59, size=2505
+Finished file /tmp/tick_bench/bench_1000/9.tick. Read 1017 messages
+Processing file: /tmp/tick_bench/bench_1000/8.tick
+Read message 1: seq=15, sym=8, price=198.61, size=7421
+Read message 2: seq=28, sym=8, price=198.55, size=2378
+Read message 3: seq=34, sym=8, price=198.58, size=586
+Read message 4: seq=49, sym=8, price=198.53, size=8487
+Read message 5: seq=73, sym=8, price=198.63, size=6634
+Finished file /tmp/tick_bench/bench_1000/8.tick. Read 999 messages
+Processing file: /tmp/tick_bench/bench_1000/4.tick
+Read message 1: seq=21, sym=4, price=465.61, size=3165
+Read message 2: seq=22, sym=4, price=465.55, size=4454
+Read message 3: seq=30, sym=4, price=465.95, size=8422
+Read message 4: seq=36, sym=4, price=465.44, size=3446
+Read message 5: seq=52, sym=4, price=465.56, size=2877
+Finished file /tmp/tick_bench/bench_1000/4.tick. Read 972 messages
+Processing file: /tmp/tick_bench/bench_1000/3.tick
+Read message 1: seq=7, sym=3, price=365.77, size=3417
+Read message 2: seq=29, sym=3, price=365.62, size=1578
+Read message 3: seq=35, sym=3, price=365.77, size=607
+Read message 4: seq=38, sym=3, price=366.14, size=6838
+Read message 5: seq=39, sym=3, price=365.93, size=5309
+Finished file /tmp/tick_bench/bench_1000/3.tick. Read 1003 messages
+Processing file: /tmp/tick_bench/bench_1000/2.tick
+Read message 1: seq=5, sym=2, price=215.45, size=2495
+Read message 2: seq=9, sym=2, price=215.36, size=7981
+Read message 3: seq=11, sym=2, price=215.46, size=4290
+Read message 4: seq=25, sym=2, price=215.40, size=5293
+Read message 5: seq=27, sym=2, price=215.47, size=4691
+Finished file /tmp/tick_bench/bench_1000/2.tick. Read 989 messages
+
+Basic Statistics:
+  Total messages read: 10005
+  Valid messages: 10005
+  Invalid messages: 0
+  Sequence range: 1 to 10005
+
+Verification Results:
+  Verified messages: 10005
+  Mismatches: 0
+  Missing sent messages: 0
+  Error rate: 0.00%
+
+Benchmark Results:
+================
+Target Rate: 1000 msgs/sec
+Messages Sent: 10005
+Messages Captured: 10005
+Messages Dropped: 0
+Capture Rate: 100.00%
+Run Time: 10.90 seconds

@@ -1,0 +1,506 @@
+
+Starting benchmark at 5000 msgs/sec for 30 seconds
+Socket receive buffer size: 8388608 bytes
+Starting capture loop. Message size: 64 bytes
+Messages - Received: 0 Processed: 0 Dropped: 0 Rate: 0.00k/s
+Starting simulator with rate: 5000 msgs/sec
+Generated message 0: seq=1, sym=2, price=303.78, size=8390
+Generated message 1: seq=2, sym=3, price=397.44, size=8920
+Storing message 0: seq=1, sym=2, price=303.78, size=8390
+Creating new file for symbol 2: /tmp/tick_bench/bench_5000/2.tick
+Generated message 2: seq=3, sym=5, price=365.37, size=8662
+Storing message 1: seq=2, sym=3, price=397.44, size=8920
+Creating new file for symbol 3: /tmp/tick_bench/bench_5000/3.tick
+Generated message 3: seq=4, sym=7, price=142.52, size=5925
+Storing message 2: seq=3, sym=5, price=365.37, size=8662
+Creating new file for symbol 5: /tmp/tick_bench/bench_5000/5.tick
+Storing message 3: seq=4, sym=7, price=142.52, size=5925
+Creating new file for symbol 7: /tmp/tick_bench/bench_5000/7.tick
+Generated message 4: seq=5, sym=8, price=103.80, size=5077
+Storing message 4: seq=5, sym=8, price=103.80, size=5077
+Creating new file for symbol 8: /tmp/tick_bench/bench_5000/8.tick
+Creating new file for symbol 9: /tmp/tick_bench/bench_5000/9.tick
+Creating new file for symbol 4: /tmp/tick_bench/bench_5000/4.tick
+Creating new file for symbol 1: /tmp/tick_bench/bench_5000/1.tick
+Creating new file for symbol 6: /tmp/tick_bench/bench_5000/6.tick
+Creating new file for symbol 10: /tmp/tick_bench/bench_5000/10.tick
+Successfully sent 1000 messages
+Successfully stored 1000 messages
+Successfully sent 2000 messages
+Successfully stored 2000 messages
+Successfully sent 3000 messages
+Successfully stored 3000 messages
+Successfully sent 4000 messages
+Successfully stored 4000 messages
+Messages - Received: 4476 Processed: 4476 Dropped: 0 Rate: 4.48k/s
+Successfully sent 5000 messages
+Successfully stored 5000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 6000 messages
+Successfully stored 6000 messages
+Successfully sent 7000 messages
+Successfully stored 7000 messages
+Successfully sent 8000 messages
+Successfully stored 8000 messages
+Successfully sent 9000 messages
+Successfully stored 9000 messages
+Messages - Received: 9497 Processed: 9497 Dropped: 0 Rate: 9.50k/s
+Successfully sent 10000 messages
+Successfully received 10000 messages
+Successfully stored 10000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 11000 messages
+Successfully stored 11000 messages
+Successfully sent 12000 messages
+Successfully stored 12000 messages
+Successfully sent 13000 messages
+Successfully stored 13000 messages
+Successfully sent 14000 messages
+Successfully stored 14000 messages
+Messages - Received: 14477 Processed: 14477 Dropped: 0 Rate: 14.48k/s
+Successfully sent 15000 messages
+Successfully stored 15000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 16000 messages
+Successfully stored 16000 messages
+Successfully sent 17000 messages
+Successfully stored 17000 messages
+Successfully sent 18000 messages
+Successfully stored 18000 messages
+Successfully sent 19000 messages
+Successfully stored 19000 messages
+Messages - Received: 19475 Processed: 19475 Dropped: 0 Rate: 19.48k/s
+Successfully sent 20000 messages
+Successfully received 20000 messages
+Successfully stored 20000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 21000 messages
+Successfully stored 21000 messages
+Successfully sent 22000 messages
+Successfully stored 22000 messages
+Successfully sent 23000 messages
+Successfully stored 23000 messages
+Successfully sent 24000 messages
+Successfully stored 24000 messages
+Messages - Received: 24494 Processed: 24494 Dropped: 0 Rate: 24.49k/s
+Successfully sent 25000 messages
+Successfully stored 25000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 26000 messages
+Successfully stored 26000 messages
+Successfully sent 27000 messages
+Successfully stored 27000 messages
+Successfully sent 28000 messages
+Successfully stored 28000 messages
+Successfully sent 29000 messages
+Successfully stored 29000 messages
+Messages - Received: 29499 Processed: 29499 Dropped: 0 Rate: 29.50k/s
+Successfully sent 30000 messages
+Successfully received 30000 messages
+Successfully stored 30000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 31000 messages
+Successfully stored 31000 messages
+Successfully sent 32000 messages
+Successfully stored 32000 messages
+Successfully sent 33000 messages
+Successfully stored 33000 messages
+Successfully sent 34000 messages
+Successfully stored 34000 messages
+Messages - Received: 34499 Processed: 34499 Dropped: 0 Rate: 34.50k/s
+Successfully sent 35000 messages
+Successfully stored 35000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 36000 messages
+Successfully stored 36000 messages
+Successfully sent 37000 messages
+Successfully stored 37000 messages
+Successfully sent 38000 messages
+Successfully stored 38000 messages
+Successfully sent 39000 messages
+Successfully stored 39000 messages
+Messages - Received: 39493 Processed: 39493 Dropped: 0 Rate: 39.49k/s
+Successfully sent 40000 messages
+Successfully received 40000 messages
+Successfully stored 40000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 41000 messages
+Successfully stored 41000 messages
+Successfully sent 42000 messages
+Successfully stored 42000 messages
+Successfully sent 43000 messages
+Successfully stored 43000 messages
+Successfully sent 44000 messages
+Successfully stored 44000 messages
+Messages - Received: 44477 Processed: 44477 Dropped: 0 Rate: 44.48k/s
+Successfully sent 45000 messages
+Successfully stored 45000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 46000 messages
+Successfully stored 46000 messages
+Successfully sent 47000 messages
+Successfully stored 47000 messages
+Successfully sent 48000 messages
+Successfully stored 48000 messages
+Successfully sent 49000 messages
+Successfully stored 49000 messages
+Messages - Received: 49499 Processed: 49499 Dropped: 0 Rate: 49.50k/s
+Successfully sent 50000 messages
+Successfully received 50000 messages
+Successfully stored 50000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 51000 messages
+Successfully stored 51000 messages
+Successfully sent 52000 messages
+Successfully stored 52000 messages
+Successfully sent 53000 messages
+Successfully stored 53000 messages
+Successfully sent 54000 messages
+Successfully stored 54000 messages
+Messages - Received: 54493 Processed: 54493 Dropped: 0 Rate: 54.49k/s
+Successfully sent 55000 messages
+Successfully stored 55000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 56000 messages
+Successfully stored 56000 messages
+Successfully sent 57000 messages
+Successfully stored 57000 messages
+Successfully sent 58000 messages
+Successfully stored 58000 messages
+Successfully sent 59000 messages
+Successfully stored 59000 messages
+Messages - Received: 59498 Processed: 59498 Dropped: 0 Rate: 59.50k/s
+Successfully sent 60000 messages
+Successfully received 60000 messages
+Successfully stored 60000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 61000 messages
+Successfully stored 61000 messages
+Successfully sent 62000 messages
+Successfully stored 62000 messages
+Successfully sent 63000 messages
+Successfully stored 63000 messages
+Successfully sent 64000 messages
+Successfully stored 64000 messages
+Messages - Received: 64479 Processed: 64479 Dropped: 0 Rate: 64.48k/s
+Successfully sent 65000 messages
+Successfully stored 65000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 66000 messages
+Successfully stored 66000 messages
+Successfully sent 67000 messages
+Successfully stored 67000 messages
+Successfully sent 68000 messages
+Successfully stored 68000 messages
+Successfully sent 69000 messages
+Successfully stored 69000 messages
+Messages - Received: 69477 Processed: 69477 Dropped: 0 Rate: 69.48k/s
+Successfully sent 70000 messages
+Successfully received 70000 messages
+Successfully stored 70000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 71000 messages
+Successfully stored 71000 messages
+Successfully sent 72000 messages
+Successfully stored 72000 messages
+Successfully sent 73000 messages
+Successfully stored 73000 messages
+Successfully sent 74000 messages
+Successfully stored 74000 messages
+Messages - Received: 74494 Processed: 74494 Dropped: 0 Rate: 74.49k/s
+Successfully sent 75000 messages
+Successfully stored 75000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 76000 messages
+Successfully stored 76000 messages
+Successfully sent 77000 messages
+Successfully stored 77000 messages
+Successfully sent 78000 messages
+Successfully stored 78000 messages
+Successfully sent 79000 messages
+Successfully stored 79000 messages
+Messages - Received: 79499 Processed: 79498 Dropped: 0 Rate: 79.50k/s
+Successfully sent 80000 messages
+Successfully received 80000 messages
+Successfully stored 80000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 81000 messages
+Successfully stored 81000 messages
+Successfully sent 82000 messages
+Successfully stored 82000 messages
+Successfully sent 83000 messages
+Successfully stored 83000 messages
+Successfully sent 84000 messages
+Successfully stored 84000 messages
+Messages - Received: 84479 Processed: 84479 Dropped: 0 Rate: 84.48k/s
+Successfully sent 85000 messages
+Successfully stored 85000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 86000 messages
+Successfully stored 86000 messages
+Successfully sent 87000 messages
+Successfully stored 87000 messages
+Successfully sent 88000 messages
+Successfully stored 88000 messages
+Successfully sent 89000 messages
+Successfully stored 89000 messages
+Messages - Received: 89488 Processed: 89488 Dropped: 0 Rate: 89.49k/s
+Successfully sent 90000 messages
+Successfully received 90000 messages
+Successfully stored 90000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 91000 messages
+Successfully stored 91000 messages
+Successfully sent 92000 messages
+Successfully stored 92000 messages
+Successfully sent 93000 messages
+Successfully stored 93000 messages
+Successfully sent 94000 messages
+Successfully stored 94000 messages
+Messages - Received: 94474 Processed: 94474 Dropped: 0 Rate: 94.47k/s
+Successfully sent 95000 messages
+Successfully stored 95000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 96000 messages
+Successfully stored 96000 messages
+Successfully sent 97000 messages
+Successfully stored 97000 messages
+Successfully sent 98000 messages
+Successfully stored 98000 messages
+Successfully sent 99000 messages
+Successfully stored 99000 messages
+Messages - Received: 99499 Processed: 99498 Dropped: 0 Rate: 99.50k/s
+Successfully sent 100000 messages
+Successfully received 100000 messages
+Successfully stored 100000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 101000 messages
+Successfully stored 101000 messages
+Successfully sent 102000 messages
+Successfully stored 102000 messages
+Successfully sent 103000 messages
+Successfully stored 103000 messages
+Successfully sent 104000 messages
+Successfully stored 104000 messages
+Messages - Received: 104475 Processed: 104475 Dropped: 0 Rate: 104.47k/s
+Successfully sent 105000 messages
+Successfully stored 105000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 106000 messages
+Successfully stored 106000 messages
+Successfully sent 107000 messages
+Successfully stored 107000 messages
+Successfully sent 108000 messages
+Successfully stored 108000 messages
+Successfully sent 109000 messages
+Successfully stored 109000 messages
+Messages - Received: 109493 Processed: 109493 Dropped: 0 Rate: 109.49k/s
+Successfully sent 110000 messages
+Successfully received 110000 messages
+Successfully stored 110000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 111000 messages
+Successfully stored 111000 messages
+Successfully sent 112000 messages
+Successfully stored 112000 messages
+Successfully sent 113000 messages
+Successfully stored 113000 messages
+Successfully sent 114000 messages
+Successfully stored 114000 messages
+Messages - Received: 114475 Processed: 114475 Dropped: 0 Rate: 114.47k/s
+Successfully sent 115000 messages
+Successfully stored 115000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 116000 messages
+Successfully stored 116000 messages
+Successfully sent 117000 messages
+Successfully stored 117000 messages
+Successfully sent 118000 messages
+Successfully stored 118000 messages
+Successfully sent 119000 messages
+Successfully stored 119000 messages
+Messages - Received: 119482 Processed: 119482 Dropped: 0 Rate: 119.48k/s
+Successfully sent 120000 messages
+Successfully received 120000 messages
+Successfully stored 120000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 121000 messages
+Successfully stored 121000 messages
+Successfully sent 122000 messages
+Successfully stored 122000 messages
+Successfully sent 123000 messages
+Successfully stored 123000 messages
+Successfully sent 124000 messages
+Successfully stored 124000 messages
+Messages - Received: 124495 Processed: 124495 Dropped: 0 Rate: 124.50k/s
+Successfully sent 125000 messages
+Successfully stored 125000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 126000 messages
+Successfully stored 126000 messages
+Successfully sent 127000 messages
+Successfully stored 127000 messages
+Successfully sent 128000 messages
+Successfully stored 128000 messages
+Successfully sent 129000 messages
+Successfully stored 129000 messages
+Messages - Received: 129492 Processed: 129492 Dropped: 0 Rate: 129.49k/s
+Successfully sent 130000 messages
+Successfully received 130000 messages
+Successfully stored 130000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 131000 messages
+Successfully stored 131000 messages
+Successfully sent 132000 messages
+Successfully stored 132000 messages
+Successfully sent 133000 messages
+Successfully stored 133000 messages
+Successfully sent 134000 messages
+Successfully stored 134000 messages
+Messages - Received: 134474 Processed: 134474 Dropped: 0 Rate: 134.47k/s
+Successfully sent 135000 messages
+Successfully stored 135000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 136000 messages
+Successfully stored 136000 messages
+Successfully sent 137000 messages
+Successfully stored 137000 messages
+Successfully sent 138000 messages
+Successfully stored 138000 messages
+Successfully sent 139000 messages
+Successfully stored 139000 messages
+Messages - Received: 139493 Processed: 139493 Dropped: 0 Rate: 139.49k/s
+Successfully sent 140000 messages
+Successfully received 140000 messages
+Successfully stored 140000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 141000 messages
+Successfully stored 141000 messages
+Successfully sent 142000 messages
+Successfully stored 142000 messages
+Successfully sent 143000 messages
+Successfully stored 143000 messages
+Successfully sent 144000 messages
+Successfully stored 144000 messages
+Messages - Received: 144477 Processed: 144477 Dropped: 0 Rate: 144.48k/s
+Successfully sent 145000 messages
+Successfully stored 145000 messages
+Simulator current rate: 5000 msgs/sec
+Successfully sent 146000 messages
+Successfully stored 146000 messages
+Successfully sent 147000 messages
+Successfully stored 147000 messages
+Successfully sent 148000 messages
+Successfully stored 148000 messages
+Successfully sent 149000 messages
+Successfully stored 149000 messages
+Messages - Received: 149481 Processed: 149481 Dropped: 0 Rate: 149.48k/s
+Successfully sent 150000 messages
+Successfully received 150000 messages
+Successfully stored 150000 messages
+Simulator current rate: 5000 msgs/sec
+Simulator stopping. Total messages sent: 150025
+
+Starting message verification...
+Verifying files in: /tmp/tick_bench/bench_5000
+Found valid tick file: /tmp/tick_bench/bench_5000/1.tick
+Found valid tick file: /tmp/tick_bench/bench_5000/10.tick
+Found valid tick file: /tmp/tick_bench/bench_5000/7.tick
+Found valid tick file: /tmp/tick_bench/bench_5000/6.tick
+Found valid tick file: /tmp/tick_bench/bench_5000/5.tick
+Found valid tick file: /tmp/tick_bench/bench_5000/9.tick
+Found valid tick file: /tmp/tick_bench/bench_5000/8.tick
+Found valid tick file: /tmp/tick_bench/bench_5000/4.tick
+Found valid tick file: /tmp/tick_bench/bench_5000/3.tick
+Found valid tick file: /tmp/tick_bench/bench_5000/2.tick
+Processing file: /tmp/tick_bench/bench_5000/1.tick
+Read message 1: seq=11, sym=1, price=299.97, size=4546
+Read message 2: seq=19, sym=1, price=300.02, size=1336
+Read message 3: seq=23, sym=1, price=299.97, size=9965
+Read message 4: seq=30, sym=1, price=299.75, size=1813
+Read message 5: seq=53, sym=1, price=299.83, size=9818
+Finished file /tmp/tick_bench/bench_5000/1.tick. Read 14981 messages
+Processing file: /tmp/tick_bench/bench_5000/10.tick
+Read message 1: seq=22, sym=10, price=131.81, size=9181
+Read message 2: seq=27, sym=10, price=131.81, size=1231
+Read message 3: seq=31, sym=10, price=131.74, size=4600
+Read message 4: seq=32, sym=10, price=131.75, size=6964
+Read message 5: seq=34, sym=10, price=131.75, size=129
+Finished file /tmp/tick_bench/bench_5000/10.tick. Read 15057 messages
+Processing file: /tmp/tick_bench/bench_5000/7.tick
+Read message 1: seq=4, sym=7, price=142.52, size=5925
+Read message 2: seq=33, sym=7, price=142.43, size=2574
+Read message 3: seq=37, sym=7, price=142.34, size=7566
+Read message 4: seq=40, sym=7, price=142.33, size=3109
+Read message 5: seq=56, sym=7, price=142.32, size=9437
+Finished file /tmp/tick_bench/bench_5000/7.tick. Read 15203 messages
+Processing file: /tmp/tick_bench/bench_5000/6.tick
+Read message 1: seq=18, sym=6, price=251.06, size=9697
+Read message 2: seq=24, sym=6, price=251.06, size=5283
+Read message 3: seq=41, sym=6, price=251.17, size=3021
+Read message 4: seq=50, sym=6, price=251.11, size=2600
+Read message 5: seq=83, sym=6, price=251.26, size=251
+Finished file /tmp/tick_bench/bench_5000/6.tick. Read 14956 messages
+Processing file: /tmp/tick_bench/bench_5000/5.tick
+Read message 1: seq=3, sym=5, price=365.37, size=8662
+Read message 2: seq=9, sym=5, price=365.84, size=1567
+Read message 3: seq=12, sym=5, price=365.84, size=5194
+Read message 4: seq=16, sym=5, price=365.84, size=8834
+Read message 5: seq=17, sym=5, price=365.73, size=6261
+Finished file /tmp/tick_bench/bench_5000/5.tick. Read 14957 messages
+Processing file: /tmp/tick_bench/bench_5000/9.tick
+Read message 1: seq=6, sym=9, price=449.93, size=1912
+Read message 2: seq=21, sym=9, price=449.67, size=3353
+Read message 3: seq=25, sym=9, price=449.42, size=2060
+Read message 4: seq=60, sym=9, price=449.49, size=7233
+Read message 5: seq=70, sym=9, price=449.42, size=3387
+Finished file /tmp/tick_bench/bench_5000/9.tick. Read 15061 messages
+Processing file: /tmp/tick_bench/bench_5000/8.tick
+Read message 1: seq=5, sym=8, price=103.80, size=5077
+Read message 2: seq=8, sym=8, price=103.84, size=7403
+Read message 3: seq=13, sym=8, price=103.85, size=2792
+Read message 4: seq=29, sym=8, price=103.89, size=7849
+Read message 5: seq=35, sym=8, price=103.93, size=9704
+Finished file /tmp/tick_bench/bench_5000/8.tick. Read 14927 messages
+Processing file: /tmp/tick_bench/bench_5000/4.tick
+Read message 1: seq=7, sym=4, price=369.42, size=3229
+Read message 2: seq=20, sym=4, price=369.08, size=9685
+Read message 3: seq=26, sym=4, price=369.19, size=721
+Read message 4: seq=28, sym=4, price=369.16, size=2894
+Read message 5: seq=48, sym=4, price=369.42, size=8179
+Finished file /tmp/tick_bench/bench_5000/4.tick. Read 14932 messages
+Processing file: /tmp/tick_bench/bench_5000/3.tick
+Read message 1: seq=2, sym=3, price=397.44, size=8920
+Read message 2: seq=15, sym=3, price=397.40, size=1406
+Read message 3: seq=36, sym=3, price=397.73, size=7986
+Read message 4: seq=42, sym=3, price=398.13, size=2010
+Read message 5: seq=43, sym=3, price=398.09, size=604
+Finished file /tmp/tick_bench/bench_5000/3.tick. Read 15023 messages
+Processing file: /tmp/tick_bench/bench_5000/2.tick
+Read message 1: seq=1, sym=2, price=303.78, size=8390
+Read message 2: seq=10, sym=2, price=303.82, size=2653
+Read message 3: seq=14, sym=2, price=303.86, size=501
+Read message 4: seq=44, sym=2, price=304.16, size=1002
+Read message 5: seq=47, sym=2, price=303.97, size=8916
+Finished file /tmp/tick_bench/bench_5000/2.tick. Read 14928 messages
+
+Basic Statistics:
+  Total messages read: 150025
+  Valid messages: 150025
+  Invalid messages: 0
+  Sequence range: 1 to 150025
+
+Verification Results:
+  Verified messages: 150025
+  Mismatches: 0
+  Missing sent messages: 0
+  Error rate: 0.00%
+
+Benchmark Results:
+================
+Target Rate: 5000 msgs/sec
+Messages Sent: 150025
+Messages Captured: 150025
+Messages Dropped: 0
+Capture Rate: 100.00%
+Run Time: 30.89 seconds

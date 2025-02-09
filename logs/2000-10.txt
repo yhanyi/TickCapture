@@ -1,0 +1,193 @@
+
+Starting benchmark at 2000 msgs/sec for 10 seconds
+Socket receive buffer size: 8388608 bytes
+Starting capture loop. Message size: 64 bytes
+Messages - Received: 0 Processed: 0 Dropped: 0 Rate: 0.00k/s
+Starting simulator with rate: 2000 msgs/sec
+Generated message 0: seq=1, sym=2, price=201.47, size=938
+Storing message 0: seq=1, sym=2, price=201.47, size=938
+Creating new file for symbol 2: /tmp/tick_bench/bench_2000/2.tick
+Generated message 1: seq=2, sym=7, price=399.16, size=4571
+Storing message 1: seq=2, sym=7, price=399.16, size=4571
+Creating new file for symbol 7: /tmp/tick_bench/bench_2000/7.tick
+Generated message 2: seq=3, sym=7, price=399.04, size=8644
+Storing message 2: seq=3, sym=7, price=399.04, size=8644
+Generated message 3: seq=4, sym=6, price=409.05, size=4894
+Storing message 3: seq=4, sym=6, price=409.05, size=4894
+Creating new file for symbol 6: /tmp/tick_bench/bench_2000/6.tick
+Generated message 4: seq=5, sym=5, price=464.58, size=4351
+Storing message 4: seq=5, sym=5, price=464.58, size=4351
+Creating new file for symbol 5: /tmp/tick_bench/bench_2000/5.tick
+Creating new file for symbol 3: /tmp/tick_bench/bench_2000/3.tick
+Creating new file for symbol 9: /tmp/tick_bench/bench_2000/9.tick
+Creating new file for symbol 1: /tmp/tick_bench/bench_2000/1.tick
+Creating new file for symbol 10: /tmp/tick_bench/bench_2000/10.tick
+Creating new file for symbol 8: /tmp/tick_bench/bench_2000/8.tick
+Creating new file for symbol 4: /tmp/tick_bench/bench_2000/4.tick
+Successfully sent 1000 messages
+Successfully stored 1000 messages
+Messages - Received: 1800 Processed: 1800 Dropped: 0 Rate: 1.80k/s
+Successfully sent 2000 messages
+Successfully stored 2000 messages
+Simulator current rate: 2000 msgs/sec
+Successfully sent 3000 messages
+Successfully stored 3000 messages
+Messages - Received: 3800 Processed: 3800 Dropped: 0 Rate: 3.80k/s
+Successfully sent 4000 messages
+Successfully stored 4000 messages
+Simulator current rate: 2000 msgs/sec
+Successfully sent 5000 messages
+Successfully stored 5000 messages
+Messages - Received: 5800 Processed: 5800 Dropped: 0 Rate: 5.80k/s
+Successfully sent 6000 messages
+Successfully stored 6000 messages
+Simulator current rate: 2000 msgs/sec
+Successfully sent 7000 messages
+Successfully stored 7000 messages
+Messages - Received: 7804 Processed: 7804 Dropped: 0 Rate: 7.80k/s
+Successfully sent 8000 messages
+Successfully stored 8000 messages
+Simulator current rate: 2000 msgs/sec
+Successfully sent 9000 messages
+Successfully stored 9000 messages
+Messages - Received: 9800 Processed: 9800 Dropped: 0 Rate: 9.80k/s
+Successfully sent 10000 messages
+Successfully received 10000 messages
+Successfully stored 10000 messages
+Simulator current rate: 2000 msgs/sec
+Successfully sent 11000 messages
+Successfully stored 11000 messages
+Messages - Received: 11810 Processed: 11810 Dropped: 0 Rate: 11.81k/s
+Successfully sent 12000 messages
+Successfully stored 12000 messages
+Simulator current rate: 2000 msgs/sec
+Successfully sent 13000 messages
+Successfully stored 13000 messages
+Messages - Received: 13810 Processed: 13809 Dropped: 0 Rate: 13.81k/s
+Successfully sent 14000 messages
+Successfully stored 14000 messages
+Simulator current rate: 2000 msgs/sec
+Successfully sent 15000 messages
+Successfully stored 15000 messages
+Messages - Received: 15806 Processed: 15806 Dropped: 0 Rate: 15.81k/s
+Successfully sent 16000 messages
+Successfully stored 16000 messages
+Simulator current rate: 2000 msgs/sec
+Successfully sent 17000 messages
+Successfully stored 17000 messages
+Messages - Received: 17800 Processed: 17800 Dropped: 0 Rate: 17.80k/s
+Successfully sent 18000 messages
+Successfully stored 18000 messages
+Simulator current rate: 2000 msgs/sec
+Successfully sent 19000 messages
+Successfully stored 19000 messages
+Messages - Received: 19810 Processed: 19809 Dropped: 0 Rate: 19.81k/s
+Successfully sent 20000 messages
+Successfully received 20000 messages
+Successfully stored 20000 messages
+Simulator current rate: 2000 msgs/sec
+Simulator stopping. Total messages sent: 20002
+
+Starting message verification...
+Verifying files in: /tmp/tick_bench/bench_2000
+Found valid tick file: /tmp/tick_bench/bench_2000/1.tick
+Found valid tick file: /tmp/tick_bench/bench_2000/10.tick
+Found valid tick file: /tmp/tick_bench/bench_2000/7.tick
+Found valid tick file: /tmp/tick_bench/bench_2000/6.tick
+Found valid tick file: /tmp/tick_bench/bench_2000/5.tick
+Found valid tick file: /tmp/tick_bench/bench_2000/9.tick
+Found valid tick file: /tmp/tick_bench/bench_2000/8.tick
+Found valid tick file: /tmp/tick_bench/bench_2000/4.tick
+Found valid tick file: /tmp/tick_bench/bench_2000/3.tick
+Found valid tick file: /tmp/tick_bench/bench_2000/2.tick
+Processing file: /tmp/tick_bench/bench_2000/1.tick
+Read message 1: seq=11, sym=1, price=109.51, size=796
+Read message 2: seq=33, sym=1, price=109.52, size=9215
+Read message 3: seq=56, sym=1, price=109.56, size=9638
+Read message 4: seq=73, sym=1, price=109.65, size=3877
+Read message 5: seq=80, sym=1, price=109.68, size=679
+Finished file /tmp/tick_bench/bench_2000/1.tick. Read 1996 messages
+Processing file: /tmp/tick_bench/bench_2000/10.tick
+Read message 1: seq=12, sym=10, price=367.70, size=2533
+Read message 2: seq=17, sym=10, price=367.65, size=8503
+Read message 3: seq=37, sym=10, price=367.76, size=6397
+Read message 4: seq=57, sym=10, price=367.92, size=538
+Read message 5: seq=79, sym=10, price=367.80, size=5943
+Finished file /tmp/tick_bench/bench_2000/10.tick. Read 2027 messages
+Processing file: /tmp/tick_bench/bench_2000/7.tick
+Read message 1: seq=2, sym=7, price=399.16, size=4571
+Read message 2: seq=3, sym=7, price=399.04, size=8644
+Read message 3: seq=14, sym=7, price=399.02, size=4428
+Read message 4: seq=16, sym=7, price=399.16, size=9644
+Read message 5: seq=18, sym=7, price=399.09, size=7791
+Finished file /tmp/tick_bench/bench_2000/7.tick. Read 1998 messages
+Processing file: /tmp/tick_bench/bench_2000/6.tick
+Read message 1: seq=4, sym=6, price=409.05, size=4894
+Read message 2: seq=8, sym=6, price=408.72, size=2430
+Read message 3: seq=10, sym=6, price=409.06, size=3625
+Read message 4: seq=25, sym=6, price=408.98, size=5282
+Read message 5: seq=28, sym=6, price=408.83, size=1934
+Finished file /tmp/tick_bench/bench_2000/6.tick. Read 2021 messages
+Processing file: /tmp/tick_bench/bench_2000/5.tick
+Read message 1: seq=5, sym=5, price=464.58, size=4351
+Read message 2: seq=15, sym=5, price=464.61, size=7767
+Read message 3: seq=23, sym=5, price=464.63, size=5403
+Read message 4: seq=26, sym=5, price=464.67, size=9115
+Read message 5: seq=27, sym=5, price=464.67, size=8308
+Finished file /tmp/tick_bench/bench_2000/5.tick. Read 1962 messages
+Processing file: /tmp/tick_bench/bench_2000/9.tick
+Read message 1: seq=7, sym=9, price=411.56, size=9889
+Read message 2: seq=9, sym=9, price=411.40, size=2765
+Read message 3: seq=34, sym=9, price=411.58, size=7101
+Read message 4: seq=46, sym=9, price=411.49, size=2867
+Read message 5: seq=82, sym=9, price=411.39, size=9883
+Finished file /tmp/tick_bench/bench_2000/9.tick. Read 2026 messages
+Processing file: /tmp/tick_bench/bench_2000/8.tick
+Read message 1: seq=20, sym=8, price=487.00, size=3814
+Read message 2: seq=63, sym=8, price=487.29, size=2624
+Read message 3: seq=69, sym=8, price=487.36, size=8782
+Read message 4: seq=72, sym=8, price=486.69, size=166
+Read message 5: seq=74, sym=8, price=486.32, size=3828
+Finished file /tmp/tick_bench/bench_2000/8.tick. Read 2001 messages
+Processing file: /tmp/tick_bench/bench_2000/4.tick
+Read message 1: seq=22, sym=4, price=322.98, size=8334
+Read message 2: seq=36, sym=4, price=322.91, size=5022
+Read message 3: seq=40, sym=4, price=322.99, size=9254
+Read message 4: seq=41, sym=4, price=323.06, size=3908
+Read message 5: seq=48, sym=4, price=323.00, size=578
+Finished file /tmp/tick_bench/bench_2000/4.tick. Read 2017 messages
+Processing file: /tmp/tick_bench/bench_2000/3.tick
+Read message 1: seq=6, sym=3, price=307.86, size=4805
+Read message 2: seq=21, sym=3, price=308.23, size=7910
+Read message 3: seq=43, sym=3, price=308.11, size=981
+Read message 4: seq=49, sym=3, price=307.95, size=1104
+Read message 5: seq=50, sym=3, price=307.93, size=696
+Finished file /tmp/tick_bench/bench_2000/3.tick. Read 2008 messages
+Processing file: /tmp/tick_bench/bench_2000/2.tick
+Read message 1: seq=1, sym=2, price=201.47, size=938
+Read message 2: seq=13, sym=2, price=201.50, size=4887
+Read message 3: seq=19, sym=2, price=201.37, size=8034
+Read message 4: seq=24, sym=2, price=201.25, size=7199
+Read message 5: seq=29, sym=2, price=201.18, size=8728
+Finished file /tmp/tick_bench/bench_2000/2.tick. Read 1946 messages
+
+Basic Statistics:
+  Total messages read: 20002
+  Valid messages: 20002
+  Invalid messages: 0
+  Sequence range: 1 to 20002
+
+Verification Results:
+  Verified messages: 20002
+  Mismatches: 0
+  Missing sent messages: 0
+  Error rate: 0.00%
+
+Benchmark Results:
+================
+Target Rate: 2000 msgs/sec
+Messages Sent: 20002
+Messages Captured: 20002
+Messages Dropped: 0
+Capture Rate: 100.00%
+Run Time: 10.90 seconds
